@@ -302,11 +302,11 @@ h3 {
   animation: spin 20s linear infinite;
 }
 
-/* Horizontal Connecting Line */
+/* Horizontal Connecting Line - Synced with Chase */
 .connecting-line {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 12%;
   width: 100%;
   height: 2px;
   background: linear-gradient(to right,
@@ -315,7 +315,7 @@ h3 {
       var(--accent-secondary) 50%,
       var(--accent-primary) 80%,
       transparent 100%);
-  opacity: 0.5;
+  opacity: 0.4;
   z-index: 1;
 }
 
@@ -324,45 +324,36 @@ h3 {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
-  width: 80px;
+  transform: translateX(-150px) translateY(-50%);
+  width: 150px;
   height: 4px;
   background: linear-gradient(to right,
       transparent,
       var(--accent-primary),
       var(--accent-secondary),
+      var(--accent-primary),
       transparent);
   border-radius: 2px;
-  box-shadow: 0 0 15px var(--accent-primary);
-  animation: lineSlide 4s ease-in-out infinite;
+  box-shadow: 0 0 20px var(--accent-primary), 0 0 40px var(--accent-secondary);
+  animation: lineSlide 15s linear infinite;
 }
 
 /* Dark mode adjustments */
 [data-theme="dark"] .connecting-line {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 [data-theme="dark"] .connecting-line::after {
-  box-shadow: 0 0 20px var(--accent-secondary);
+  box-shadow: 0 0 30px var(--accent-primary), 0 0 60px var(--accent-secondary);
 }
 
 @keyframes lineSlide {
   0% {
-    left: -80px;
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
+    transform: translateX(-150px) translateY(-50%);
   }
 
   100% {
-    left: 100%;
-    opacity: 0;
+    transform: translateX(calc(100vw + 150px)) translateY(-50%);
   }
 }
 
