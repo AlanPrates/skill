@@ -1,70 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="shortcut icon" href="/img/penguin-svgrepo-com.svg">
-  <title>Alan Prates</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alan Prates - Desenvolvedor Full Stack especializado em HTML5, CSS, JavaScript, TypeScript, Angular, PHP, .NET e muito mais.">
+  <meta name="author" content="Alan Prates">
+  <meta name="keywords" content="desenvolvedor, full stack, web developer, HTML, CSS, JavaScript, Angular, PHP, .NET">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alan Prates - Desenvolvedor Full Stack">
+  <meta property="og:description" content="Portfólio de desenvolvimento web e projetos.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/penguin-svgrepo-com.svg" type="image/svg+xml">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <title>Alan Prates | Desenvolvedor Full Stack</title>
 </head>
-
 <body>
-  <header class="cabecalho">
-    <img class="cabecalho-imagem" src="img/logo.svg" title="Sempre se atualizando constantemente" alt="LOGO ALAN" />
-    <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-item" href="">Alan Prates Dev 🫶🏻</a>
-
-    </nav>
-  </header>
-  <main class="conteudo">
-    <section class="conteudo-principal">
-      <img class="conteudo-principal-imagem" src="img/IMG_0135.jpg" alt="" />
-      <div class="conteudo-principal-escrito"></div>
-      <div class="tecnologia">
-        <h2> <img class="conteudo-principal-tecnologia" src="skill/html5-svgrepo-com.svg" title="HTML5" alt="" />HTML5</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/css-svgrepo-com.svg" title="CSS" alt="" />CSS</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/icons8-bootstrap.svg" title="Bootstrap" alt="" />Bootstrap</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/js-svgrepo-com.svg" title="JavaScript"alt="" />JavaScript</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/typescript-16-svgrepo-com.svg" title="TypeScript"alt="" />TypeScript</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/angular-16-svgrepo-com.svg" title="Angular" alt="" />Angular</h2>
-      </div>
-      <div class="tecnologia-secundaria">
-        <h2> <img class="conteudo-principal-tecnologia" src="skill/mysql-svgrepo-com.svg" title="MYSQL" alt="" />MYSQL</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/php-file-svgrepo-com.svg" title="PHP" alt="" />PHP</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/icons8-wordpress.svg" title="PHP" alt="" />Wordpress</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/c-sharp-16-svgrepo-com.svg" title="C-Sharp"alt="" />C-Sharp</h2>
-        <h2><img class="conteudo-principal-tecnologia" src="skill/dotnet-svgrepo-com.svg" title="PHP" alt="" />.NET</h2>
-      </div>
-    </section>
-  </main>
-  <main>
-    <div class="box">
-      <pre>
-        <code>
-          <h1>Últimas Atualizações</h1>
-          <hr />
-          <ul></ul>
-          <div id="button-container">
-            <button id="load-more">Carregar Mais</button>
-          </div>
-          
-        </code>
-      </pre>
-    </div>
-  </main>
-  <footer class="rodape">
-    <h3>𓆉𓃥𓃠𓃰𓄂𓅯</h3>
-    <p> Site Desenvolvido por @AlanInvasion</p>
-    <div class="contact contact-margin">
-      <a href="https://github.com/AlanPrates">
-        <img src="img/github-color-svgrepo-com.svg" alt="Contact Icon">
-        Meu github
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__content">
+      <a href="/">
+        <img src="assets/images/logo.svg" alt="Alan Prates Logo" class="header__logo">
       </a>
+      
+      <nav class="header__nav">
+        <a href="#skills" class="header__link">Skills</a>
+        <a href="#projects" class="header__link">Projetos</a>
+        <a href="https://github.com/AlanPrates" target="_blank" rel="noopener" class="header__link">GitHub</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero__content">
+      <div class="hero__text">
+        <span class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Disponível para projetos
+        </span>
+        <h1 class="hero__title">Alan Prates</h1>
+        <p class="hero__subtitle">
+          Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis. 
+          Transformando ideias em código limpo e interfaces modernas.
+        </p>
+      </div>
+      
+      <div class="hero__image-wrapper">
+        <div class="hero__image-ring"></div>
+        <img src="assets/images/profile/IMG_0135.jpg" alt="Alan Prates" class="hero__image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Minhas Skills</h2>
+        <p class="section__subtitle">Tecnologias que domino e uso no dia a dia</p>
+      </header>
+      
+      <!-- Frontend -->
+      <div class="skills__category">
+        <h3 class="skills__category-title">Frontend</h3>
+        <div class="skills__grid">
+          <article class="skill-card">
+            <img src="assets/icons/skills/html5-svgrepo-com.svg" alt="HTML5" class="skill-card__icon">
+            <span class="skill-card__name">HTML5</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/css-svgrepo-com.svg" alt="CSS3" class="skill-card__icon">
+            <span class="skill-card__name">CSS3</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/icons8-bootstrap.svg" alt="Bootstrap" class="skill-card__icon">
+            <span class="skill-card__name">Bootstrap</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/js-svgrepo-com.svg" alt="JavaScript" class="skill-card__icon">
+            <span class="skill-card__name">JavaScript</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/typescript-16-svgrepo-com.svg" alt="TypeScript" class="skill-card__icon">
+            <span class="skill-card__name">TypeScript</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/angular-16-svgrepo-com.svg" alt="Angular" class="skill-card__icon">
+            <span class="skill-card__name">Angular</span>
+          </article>
+        </div>
+      </div>
+      
+      <!-- Backend -->
+      <div class="skills__category">
+        <h3 class="skills__category-title">Backend & Database</h3>
+        <div class="skills__grid">
+          <article class="skill-card">
+            <img src="assets/icons/skills/php-file-svgrepo-com.svg" alt="PHP" class="skill-card__icon">
+            <span class="skill-card__name">PHP</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/mysql-svgrepo-com.svg" alt="MySQL" class="skill-card__icon">
+            <span class="skill-card__name">MySQL</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/c-sharp-16-svgrepo-com.svg" alt="C#" class="skill-card__icon">
+            <span class="skill-card__name">C#</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/dotnet-svgrepo-com.svg" alt=".NET" class="skill-card__icon">
+            <span class="skill-card__name">.NET</span>
+          </article>
+          
+          <article class="skill-card">
+            <img src="assets/icons/skills/icons8-wordpress.svg" alt="WordPress" class="skill-card__icon">
+            <span class="skill-card__name">WordPress</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (GitHub Repos) -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Meus Projetos</h2>
+        <p class="section__subtitle">Últimas atualizações do GitHub</p>
+      </header>
+      
+      <div id="projects-grid" class="projects__grid">
+        <!-- Repos carregados via JavaScript -->
+      </div>
+      
+      <footer class="projects__footer">
+        <button id="load-more" class="btn btn--primary">
+          Carregar Mais
+        </button>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <span class="footer__emoji">𓆉𓃥𓃠𓃰𓄂𓅯</span>
+      <p class="footer__text">Desenvolvido com 💜 por @AlanInvasion</p>
+      
+      <div class="footer__social">
+        <a href="https://github.com/AlanPrates" target="_blank" rel="noopener" class="footer__social-link">
+          <img src="assets/icons/github-color-svgrepo-com.svg" alt="GitHub" class="footer__social-icon">
+          GitHub
+        </a>
+      </div>
     </div>
   </footer>
-  <script defer src="js/app.js"></script>
-  <script defer src="js/script.js"></script>
-</body>
 
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
 </html>
