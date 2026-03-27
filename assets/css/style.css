@@ -818,6 +818,115 @@ h3 {
   animation: spin 1s linear infinite;
 }
 
+
+/* ==========================================
+   DRAGON FIRE GAME SECTION
+   ========================================== */
+.dragon-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.dragon-section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.dragon-section__game {
+  margin-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.dragon-section__canvas-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+#scene {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: crosshair;
+}
+
+.dragon-section__controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.dragon-control {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.dragon-control:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.dragon-control__icon {
+  font-size: 1.5rem;
+}
+
+.dragon-control strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.dragon-control p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.dragon-section__score {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--bg-glass);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-full);
+}
+
+.dragon-section__subtitle {
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .dragon-section__controls {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
 /* ==========================================
    FOOTER
    ========================================== */

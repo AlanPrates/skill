@@ -40,6 +40,7 @@
 
       <nav class="header__nav">
         <a href="#skills" class="header__link">Skills</a>
+        <a href="#dragon-game" class="header__link">Mini Game</a>
         <a href="#projects" class="header__link">Projetos</a>
         <a href="https://github.com/AlanPrates" target="_blank" rel="noopener" class="header__link">GitHub</a>
         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
@@ -169,6 +170,53 @@
     </div>
   </section>
 
+
+  <!-- Dragon Game Section -->
+  <section class="dragon-section" id="dragon-game">
+    <div class="dragon-section__container">
+      <div class="section__header fade-in-up">
+        <span class="hero__badge" style="margin: 0 auto 1rem;">
+          <span class="hero__badge-dot" style="background: #f97316;"></span>
+          🐉 Mini Game
+        </span>
+        <h2 class="section__title">Dragon Fire</h2>
+        <p class="dragon-section__subtitle">Arraste o dragão com o mouse e pressione "1" para lançar bolas de fogo!</p>
+      </div>
+
+      <div class="dragon-section__game fade-in-up">
+        <div class="dragon-section__canvas-wrapper">
+          <canvas id="scene" width="1000" height="600"></canvas>
+        </div>
+
+        <div class="dragon-section__controls">
+          <div class="dragon-control">
+            <span class="dragon-control__icon">🖱️</span>
+            <div>
+              <strong>Arrastar</strong>
+              <p>Clique e arraste o dragão</p>
+            </div>
+          </div>
+          <div class="dragon-control">
+            <span class="dragon-control__icon">🔥</span>
+            <div>
+              <strong>Tecla "1"</strong>
+              <p>Lançar bola de fogo</p>
+            </div>
+          </div>
+          <div class="dragon-control">
+            <span class="dragon-control__icon">🎯</span>
+            <div>
+              <strong>Mover Mouse</strong>
+              <p>Direcionar o dragão</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dragon-section__score" id="score-display">Pontos: 0</div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section (GitHub Repos) -->
   <section id="projects" class="projects">
     <div class="container">
@@ -214,6 +262,7 @@
 
   <!-- Scripts -->
   <script type="module" src="assets/js/main.js"></script>
+  <script src="assets/dragon-game/js/game.js"></script>
 </body>
 
 </html>

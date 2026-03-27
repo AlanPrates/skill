@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dragon Fire - Um jogo de dragão interativo. Controle o dragão, lance bolas de fogo e destrua os inimigos!" />
+  <title>Dragon Fire | Alan Prates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="../index.html" class="back-link" title="Voltar para Landing Page">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
+      </svg>
+      <span>Voltar</span>
+    </a>
+    <h1 class="header__title">🐉 Dragon Fire</h1>
+    <div class="header__score" id="score-display">Pontos: 0</div>
+  </header>
+
+  <main class="game-container">
+    <div class="canvas-wrapper">
+      <canvas id="scene" width="1000" height="600"></canvas>
+    </div>
+
+    <section class="controls">
+      <h2 class="controls__title">Controles</h2>
+      <div class="controls__grid">
+        <div class="control-card">
+          <div class="control-card__icon">🖱️</div>
+          <div class="control-card__text">
+            <strong>Arrastar</strong>
+            <p>Clique e arraste o dragão</p>
+          </div>
+        </div>
+        <div class="control-card">
+          <div class="control-card__icon">🔥</div>
+          <div class="control-card__text">
+            <strong>Tecla "1"</strong>
+            <p>Lançar bola de fogo</p>
+          </div>
+        </div>
+        <div class="control-card">
+          <div class="control-card__icon">🎯</div>
+          <div class="control-card__text">
+            <strong>Mover Mouse</strong>
+            <p>Direcionar o dragão</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desenvolvido por <strong>Alan Prates</strong> &copy; 2026</p>
+  </footer>
+
+  <script src="js/game.js"></script>
+</body>
+
+</html>
